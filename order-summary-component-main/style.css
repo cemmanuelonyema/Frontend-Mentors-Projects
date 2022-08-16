@@ -1,0 +1,141 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --pale-blue-1: hsl(225, 100%, 93%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --pale-blue-2: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* ## Typography */
+
+  /* ### Body Copy */
+
+  /* - Font size (paragraph): 16px */
+
+  /* ### Font */
+  /* 
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900 */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--pale-blue-1);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: var(--body-text);
+  font-weight: 500;
+  color: var(--dark-blue);
+
+  display: grid;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.diva {
+  background-color: var(--pale-blue-1);
+}
+.diva span:nth-child(1) {
+  display: none;
+}
+.diva span:nth-child(2) {
+}
+.diva span:nth-child(3) {
+}
+.para {
+  width: 70%;
+  margin: auto;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 1rem;
+  transition: all ease-in-out 0.4s;
+}
+
+.content-container {
+  padding: 3rem 3rem 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--pale-blue-2);
+
+  /* flex: 1; */
+  /* width: 50%; */
+}
+
+h1 {
+  font-size: 3.5rem;
+  /* font-family: var(--head-text); */
+  font-family: "Fraunces", serif;
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+.desc {
+  line-height: 1.8;
+}
+
+.preview {
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.btn {
+  text-decoration: none;
+  border-radius: 1rem;
+  border: none;
+  padding: 2rem 4rem;
+  font-weight: bold;
+  transition: all ease-in-out 0.4s;
+}
+
+.btn-primary {
+  color: var(--pale-blue-2);
+  background-color: var(--bright-blue);
+  /* display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: none; */
+}
+
+.btn-primary:hover {
+  background-color: var(--desaturated-blue);
+}
+
+.btn-secondary {
+  background-color: var(--pale-blue-2);
+  color: var(--dark-blue);
+}
+.btn-secondary:hover {
+}
