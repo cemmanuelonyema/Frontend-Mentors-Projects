@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--cream);
   font-size: 1.6rem;
   font-family: var(--body-text);
@@ -48,7 +48,8 @@ main {
   padding: 3rem;
   display: grid;
   /* align-items: center; */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr);
 }
 /* main {
   max-width: 90rem;
@@ -63,6 +64,7 @@ img {
   object-fit: cover;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  transition: all ease-in-out 0.4s;
 }
 
 .content-container {
@@ -77,24 +79,41 @@ img {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   /* font-family: var(--head-text); */
   font-family: "Fraunces", serif;
   color: var(--dark-blue);
   font-weight: bolder;
 }
+.desc {
+  line-height: 1.8;
+}
+
+.preview {
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
 
 .btn {
   text-decoration: none;
+  border-radius: 1rem;
   color: var(--white);
-  background-color: var(--dark-cyan);
+  background-color: var(--cyan);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   padding: 2rem 4rem;
-  display: inline-block;
-  border-radius: 2rem;
-  text-align: center;
+  border: none;
   font-weight: bold;
+  transition: all ease-in-out 0.4s;
 }
 
+.btn:hover {
+  background-color: var(--dark-cyan);
+}
 .prices {
   display: flex;
   align-items: center;
@@ -111,5 +130,17 @@ h1 {
 .price-2 {
   color: var(--dark-cyan);
   font-family: var(--body-text);
+  text-decoration: line-through;
   /* font-size: 3rem; */
+}
+.cart-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+@media screen and (max-width: 40.625em) {
+  main {
+    grid-template-columns: 1fr;
+  }
 }
